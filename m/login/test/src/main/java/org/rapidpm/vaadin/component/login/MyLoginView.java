@@ -1,12 +1,12 @@
 /**
  * Copyright © 2018 Sven Ruppert (sven.ruppert@gmail.com)
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -22,7 +22,7 @@ import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import org.rapidpm.vaadin.demo.workspaces.ClickCounterWorkspace;
 
-import java.util.Properties;
+import java.util.ResourceBundle;
 
 import static org.rapidpm.vaadin.component.login.MyLoginView.NAV_LOGIN;
 
@@ -34,14 +34,7 @@ public class MyLoginView extends LoginView {
 
   public static final String NAV_LOGIN = "login";
 
-  private static Properties properties = new Properties();
-
-  static {
-    properties.put(LoginView.BTN_LOGIN_CAPTION, "Login");
-    properties.put(LoginView.BTN_CANCEL_CAPTION, "Cancel");
-    properties.put(LoginView.TF_USERNAME_PLACEHOLDER, "Username");
-    properties.put(LoginView.CB_REMEMBER_ME_CAPTION, "remember me");
-  }
+  private static ResourceBundle RESOURCE_BUNDEL = ResourceBundle.getBundle("default");
 
   public MyLoginView() {
     //for demo
@@ -76,8 +69,10 @@ public class MyLoginView extends LoginView {
 
   }
 
-  @Override
-  public Properties properties() {
-    return properties;
+  //
+  public String resolve(String key){
+    return (RESOURCE_BUNDEL.containsKey(key))
+           ? RESOURCE_BUNDEL.getString(key)
+           : key;
   }
 }

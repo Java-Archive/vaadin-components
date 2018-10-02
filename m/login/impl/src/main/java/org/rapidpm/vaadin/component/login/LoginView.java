@@ -1,12 +1,12 @@
 /**
  * Copyright © 2018 Sven Ruppert (sven.ruppert@gmail.com)
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -36,14 +36,12 @@ import org.rapidpm.vaadin.api.fluent.builder.layout.vertical.VerticalLayoutBuild
 import org.rapidpm.vaadin.api.fluent.builder.passwordfield.PasswordFieldBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.textfield.TextFieldBuilder;
 
-import java.util.Properties;
 import java.util.function.Consumer;
 
 import static java.util.Optional.ofNullable;
 import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.*;
 
 public abstract class LoginView extends Composite<HorizontalLayout> implements HasLogger {
-
 
   public static final String BTN_LOGIN_ID      = buttonID().apply(LoginView.class, "btn-login");
   public static final String BTN_CANCEL_ID     = buttonID().apply(LoginView.class, "btn-cancel");
@@ -59,9 +57,7 @@ public abstract class LoginView extends Composite<HorizontalLayout> implements H
 
   private final TextField username = new TextFieldBuilder(TextField::new)
       .set(Component::setId, TF_USERNAME_ID)
-      .setPlaceholder(properties().getProperty(TF_USERNAME_PLACEHOLDER,
-                                               TF_USERNAME_PLACEHOLDER
-                                              )) //.set(TextField::setPlaceholder, "User Name")
+      .setPlaceholder(resolve(TF_USERNAME_PLACEHOLDER)) //.set(TextField::setPlaceholder, "User Name")
       .component()
       .get();
 
@@ -70,21 +66,21 @@ public abstract class LoginView extends Composite<HorizontalLayout> implements H
 
   private final Checkbox rememberMe = new CheckboxBuilder(Checkbox::new)
       .setId(CB_REMEMBER_ME_ID)
-      .setLabel(properties().getProperty(CB_REMEMBER_ME_CAPTION, CB_REMEMBER_ME_CAPTION))
+      .setLabel(resolve(CB_REMEMBER_ME_CAPTION))
       .setIndeterminate(false)
       .build();
 
 
   private final Button btnLogin = new ButtonBuilder(Button::new)
       .setId(BTN_LOGIN_ID)
-      .setText(properties().getProperty(BTN_LOGIN_CAPTION, BTN_CANCEL_CAPTION))
+      .setText(resolve(BTN_LOGIN_CAPTION))
       .addClickListener(e -> validate())
       .component()
       .orElseGet(() -> new Button("dummy button"));
 
   private final Button btnCancel = new ButtonBuilder(Button::new)
       .setId(BTN_CANCEL_ID)
-      .setText(properties().getProperty(BTN_CANCEL_CAPTION, BTN_CANCEL_CAPTION))
+      .setText(resolve(BTN_CANCEL_CAPTION))
       .addClickListener(e -> clearFields())
       .component()
       .orElseGet(() -> new Button("dummy button"));
@@ -157,7 +153,7 @@ public abstract class LoginView extends Composite<HorizontalLayout> implements H
 
   public abstract boolean checkCredentials();
 
-  public abstract Properties properties();
+  public abstract String resolve(String key);
 
 
 }
