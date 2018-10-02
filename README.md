@@ -19,7 +19,7 @@ This is the wiki for the Vaadin Components.
         * addClickListener(ComponentEventListener<ClickEvent<T>> listener, Consumer<Registration> registrationConsumer)
         * addDetachListener(ComponentEventListener<ClickEvent<T>> listener, Consumer<Registration> registrationConsumer)
         * addAttachListener(ComponentEventListener<ClickEvent<T>> listener, Consumer<Registration> registrationConsumer)
-    * added the possibility to add ClickListener without Registration cunsumer
+    * added the possibility to add ClickListener without Registration consumer
         * addClickListener(ComponentEventListener<ClickEvent<T>> listener)
         * addDetachListener(ComponentEventListener<ClickEvent<T>> listener)
         * addAttachListener(ComponentEventListener<ClickEvent<T>> listener)
@@ -46,5 +46,5 @@ The missing Fluent API for Vaadin 10 Components.
 Documentation is : [Component-Fluent-API.md](Component-Fluent-API.md)
 
 ## Component - Login
-The boring but usefull Login Component
+The boring but useful Login Component
 Documentation is : [Component-Login.md](Component-Login.md)
