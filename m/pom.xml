@@ -28,10 +28,25 @@
 
   <artifactId>vaadin-components-m</artifactId>
   <packaging>pom</packaging>
+
   <modules>
     <module>login</module>
-    <module>fluent-api</module>
   </modules>
+
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.rapidpm.vaadin</groupId>
+        <artifactId>vaadin-components-bom</artifactId>
+        <version>00.07.05-RPM</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+
 
 
 </project>
