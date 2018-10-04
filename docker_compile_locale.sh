@@ -22,4 +22,4 @@ docker run \
        -v "$(pwd)":/usr/src/mymaven \
        -w /usr/src/mymaven \
        svenruppert/maven-3.5-jdk-openjdk-10 \
-       mvn clean install
+       mvn clean install -Dmaven.test.skip=true
