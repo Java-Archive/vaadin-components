@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.rapidpm.vaadin</groupId>
     <artifactId>vaadin-components</artifactId>
-    <version>00.07.05-RPM</version>
+    <version>00.07.06-RPM</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <packaging>pom</packaging>
@@ -35,12 +35,12 @@
       <dependency>
         <groupId>org.rapidpm.vaadin</groupId>
         <artifactId>vaadin-components-core-fluent-api</artifactId>
-        <version>00.07.05-RPM</version>
+        <version>00.07.06-RPM</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm.vaadin</groupId>
         <artifactId>vaadin-components-m-login-impl</artifactId>
-        <version>00.07.05-RPM</version>
+        <version>00.07.06-RPM</version>
       </dependency>
 
 
