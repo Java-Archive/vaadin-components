@@ -35,7 +35,7 @@
   <groupId>org.rapidpm.vaadin</groupId>
   <artifactId>vaadin-components</artifactId>
   <name>RapidPM Vaadin Components</name>
-  <version>00.07.06-RPM</version>
+  <version>00.07.07-RPM-SNAPSHOT</version>
 
 
   <packaging>pom</packaging>
@@ -97,7 +97,7 @@
     <rapidpm-dependencies.version>04.00.07-RPM</rapidpm-dependencies.version>
     <rapidpm-functional-reactive.version>00.07.06-RPM</rapidpm-functional-reactive.version>
     <rapidpm-vaadin-testbench-ng.version>00.07.06-RPM</rapidpm-vaadin-testbench-ng.version>
-    <rapidpm-vaadin-components.version>00.07.06-RPM</rapidpm-vaadin-components.version>
+    <rapidpm-vaadin-components.version>00.07.07-RPM-SNAPSHOT</rapidpm-vaadin-components.version>
     <!--Vaadin-->
     <vaadin.version>11.0.1</vaadin.version>
     <meecrowave.version>1.2.4</meecrowave.version>
