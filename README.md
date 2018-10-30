@@ -1,3 +1,10 @@
+Component Login - [![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/rapidpm-vaadin-component---login)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/rapidpm-vaadin-component---login.svg)](https://vaadin.com/directory/component/rapidpm-vaadin-component---login)
+  
+Component Fluent API - [![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/rapidpm-vaadin-fluent-component-api)
+[![Stars on Vaadin Directory](https://img.shields.io/vaadin-directory/star/rapidpm-vaadin-fluent-component-api.svg)](https://vaadin.com/directory/component/rapidpm-vaadin-fluent-component-api) 
+
+
 # vaadin-components
 A collection of Vaadin components
 
