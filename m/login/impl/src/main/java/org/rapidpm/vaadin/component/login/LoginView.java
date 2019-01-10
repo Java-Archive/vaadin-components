@@ -15,6 +15,21 @@
  */
 package org.rapidpm.vaadin.component.login;
 
+import static java.util.Optional.ofNullable;
+import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.buttonID;
+import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.caption;
+import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.passwordID;
+import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.placeholder;
+import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.textfieldID;
+import static org.rapidpm.vaadin.addons.framework.GenericIDGenerator.genericID;
+import java.util.function.Consumer;
+import org.rapidpm.dependencies.core.logger.HasLogger;
+import org.rapidpm.vaadin.api.fluent.builder.button.ButtonBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.checkbox.CheckboxBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.layout.horizontal.HorizontalLayoutBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.layout.vertical.VerticalLayoutBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.passwordfield.PasswordFieldBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.textfield.TextFieldBuilder;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -28,18 +43,6 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.shared.Registration;
-import org.rapidpm.dependencies.core.logger.HasLogger;
-import org.rapidpm.vaadin.api.fluent.builder.button.ButtonBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.checkbox.CheckboxBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.layout.horizontal.HorizontalLayoutBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.layout.vertical.VerticalLayoutBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.passwordfield.PasswordFieldBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.textfield.TextFieldBuilder;
-
-import java.util.function.Consumer;
-
-import static java.util.Optional.ofNullable;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.*;
 
 public abstract class LoginView extends Composite<HorizontalLayout> implements HasLogger {
 
