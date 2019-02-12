@@ -1,11 +1,10 @@
 package org.rapidpm.vaadin.api.fluent.builder.combobox;
 
-import java.util.Collection;
 import java.util.function.Consumer;
 
 import org.rapidpm.vaadin.api.fluent.builder.api.AbstractSinglePropertyFieldMixin;
 import org.rapidpm.vaadin.api.fluent.builder.api.FocusableMixin;
-import org.rapidpm.vaadin.api.fluent.builder.api.HasDataProviderMixin;
+import org.rapidpm.vaadin.api.fluent.builder.api.HasFilterableDataProviderMixin;
 import org.rapidpm.vaadin.api.fluent.builder.api.HasSizeMixin;
 import org.rapidpm.vaadin.api.fluent.builder.api.HasStyleMixin;
 import org.rapidpm.vaadin.api.fluent.builder.api.HasValidationMixin;
@@ -16,25 +15,25 @@ import com.vaadin.flow.data.renderer.Renderer;
 import com.vaadin.flow.shared.Registration;
 
 public interface ComboBoxMixin
-    extends HasSizeMixin<ComboBoxMixin, ComboBox>,
-    AbstractSinglePropertyFieldMixin<ComboBoxMixin, ComboBox>,
-    FocusableMixin<ComboBoxMixin, ComboBox>,
+    extends
+    HasSizeMixin<ComboBoxMixin, ComboBox>,
+    HasValidationMixin<ComboBoxMixin, ComboBox>,
     HasStyleMixin<ComboBoxMixin, ComboBox>,
-    HasDataProviderMixin<ComboBoxMixin, ComboBox>,
-    HasValidationMixin<ComboBoxMixin, ComboBox> {
-
+    FocusableMixin<ComboBoxMixin, ComboBox>,
+    AbstractSinglePropertyFieldMixin<ComboBoxMixin, ComboBox>,
+    HasFilterableDataProviderMixin<ComboBoxMixin, ComboBox> {
 
   default ComboBoxMixin setRenderer(Renderer renderer) {
     return invoke(c -> c.setRenderer(renderer));
   }
-
-  default ComboBoxMixin setFilteredItems(Object[] filteredItems) {
-    return invoke(c -> c.setFilteredItems(filteredItems));
-  }
-
-  default ComboBoxMixin setFilteredItems(Collection filteredItems) {
-    return invoke(c -> c.setFilteredItems(filteredItems));
-  }
+// V10 - was removed
+//  default ComboBoxMixin setFilteredItems(Object[] filteredItems) {
+//    return invoke(c -> c.setFilteredItems(filteredItems));
+//  }
+//
+//  default ComboBoxMixin setFilteredItems(Collection filteredItems) {
+//    return invoke(c -> c.setFilteredItems(filteredItems));
+//  }
 
   default ComboBoxMixin setItemLabelGenerator(ItemLabelGenerator itemLabelGenerator) {
     return invoke(c -> c.setItemLabelGenerator(itemLabelGenerator));

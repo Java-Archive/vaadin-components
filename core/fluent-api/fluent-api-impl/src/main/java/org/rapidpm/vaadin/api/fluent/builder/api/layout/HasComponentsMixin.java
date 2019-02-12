@@ -22,5 +22,11 @@ public interface HasComponentsMixin<R extends HasComponentsMixin, T extends HasC
     return invoke(HasComponents::removeAll);
   }
 
+  default R addComponentAtIndex(int index , Component component) {
+    return invoke(c -> c.addComponentAtIndex(index , component));
+  }
 
+  default R addComponentAsFirst(Component component) {
+    return invoke(c -> c.addComponentAsFirst(component));
+  }
 }
