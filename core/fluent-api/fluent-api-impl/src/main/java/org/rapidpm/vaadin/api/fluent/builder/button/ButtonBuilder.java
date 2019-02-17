@@ -21,7 +21,9 @@ import org.rapidpm.frp.model.Result;
 import org.rapidpm.vaadin.api.fluent.builder.ComponentHolder;
 import com.vaadin.flow.component.button.Button;
 
-public class ButtonBuilder extends ComponentHolder<Button> implements ButtonMixin {
+public class ButtonBuilder
+    extends ComponentHolder<Button>
+    implements ButtonMixin {
 
   public ButtonBuilder(Result<Button> component) {
     super(component);
@@ -29,5 +31,9 @@ public class ButtonBuilder extends ComponentHolder<Button> implements ButtonMixi
 
   public ButtonBuilder(Supplier<Button> supplier) {
     super(supplier);
+  }
+
+  public ButtonBuilder(Button component) {
+    super(component);
   }
 }

@@ -32,4 +32,8 @@ public class HorizontalLayoutBuilder
   public HorizontalLayoutBuilder(Supplier<HorizontalLayout> supplier) {
     super(supplier);
   }
+
+  public HorizontalLayoutBuilder(HorizontalLayout component) {
+    super(component);
+  }
 }

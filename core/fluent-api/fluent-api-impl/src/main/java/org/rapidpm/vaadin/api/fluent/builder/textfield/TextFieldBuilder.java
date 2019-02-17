@@ -25,7 +25,6 @@ public class TextFieldBuilder
     extends ComponentHolder<TextField>
     implements TextFieldMixin {
 
-
   public TextFieldBuilder(Result<TextField> component) {
     super(component);
   }
@@ -34,5 +33,7 @@ public class TextFieldBuilder
     super(supplier);
   }
 
-
+  public TextFieldBuilder(TextField t) {
+    super(t);
+  }
 }

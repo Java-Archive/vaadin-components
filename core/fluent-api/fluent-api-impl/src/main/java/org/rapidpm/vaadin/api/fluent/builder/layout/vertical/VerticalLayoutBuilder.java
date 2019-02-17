@@ -32,4 +32,8 @@ public class VerticalLayoutBuilder
   public VerticalLayoutBuilder(Supplier<VerticalLayout> supplier) {
     super(supplier);
   }
+
+  public VerticalLayoutBuilder(VerticalLayout component) {
+    super(component);
+  }
 }

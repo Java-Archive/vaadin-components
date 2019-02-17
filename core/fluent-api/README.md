@@ -5,13 +5,13 @@ Vaadin Button
 Vaadin Checkbox
 Vaadin Ordered Layout - Horizontal / Vertical
 Vaadin Text Field - Text / Password
-
-
-## Backlog
 Vaadin Combo Box
 
-Vaadin Accordion
+## Backlog
 Vaadin Context Menu
+
+Vaadin Accordion
+
 Vaadin Date Picker
 Vaadin Time Picker
 Vaadin Details 
@@ -29,8 +29,10 @@ Vaadin Split Layout
 Vaadin Tabs 
 Vaadin Upload 
 Vaadin Custom Field 
+
 Vaadin App Layout 
 Vaadin Login 
+
 Vaadin Board 
 Vaadin Charts 
 Vaadin Confirm Dialog 

@@ -10,7 +10,6 @@ import com.vaadin.flow.shared.Registration;
 public interface DetachNotifierMixin<R extends DetachNotifierMixin, T extends DetachNotifier>
     extends NeutralMixin<R, T> {
 
-  //<R extends ComponentMixin<T>>
   default R addDetachListener(ComponentEventListener<DetachEvent> listener ,
                               Consumer<Registration> registrationConsumer) {
     component()
@@ -23,6 +22,4 @@ public interface DetachNotifierMixin<R extends DetachNotifierMixin, T extends De
     component().map(component -> component.addDetachListener(listener));
     return (R) this;
   }
-
-
 }

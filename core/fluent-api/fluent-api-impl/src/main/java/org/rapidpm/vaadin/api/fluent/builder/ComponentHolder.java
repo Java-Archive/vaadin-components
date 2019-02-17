@@ -27,6 +27,10 @@ public class ComponentHolder<T extends Component> {
 
   private Result<T> component;
 
+  public ComponentHolder(T component) {
+    this.component = ofNullable(component);
+  }
+
   public ComponentHolder(Result<T> component) {
     this.component = component;
   }
