@@ -16,6 +16,10 @@ This is the wiki for the Vaadin Components.
 
 ## Repositories
 
+## 00.08.00-RPM
+* i18n Dynamic PageTitle : available in Vaadin Directory 
+* added IDGenerator
+
 
 
 

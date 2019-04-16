@@ -31,7 +31,7 @@
   <groupId>org.rapidpm.vaadin</groupId>
   <artifactId>vaadin-components</artifactId>
   <name>RapidPM Vaadin Components for >= V10</name>
-  <version>01.00.00-RPM-SNAPSHOT</version>
+  <version>00.08.00-RPM</version>
 
 
   <packaging>pom</packaging>
