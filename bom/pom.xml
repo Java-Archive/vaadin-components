@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.rapidpm.vaadin</groupId>
     <artifactId>vaadin-components</artifactId>
-    <version>00.07.07-RPM-SNAPSHOT</version>
+    <version>01.00.00-RPM-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <packaging>pom</packaging>
@@ -32,18 +32,27 @@
   <dependencyManagement>
     <dependencies>
 
+
       <dependency>
         <groupId>org.rapidpm.vaadin</groupId>
-        <artifactId>vaadin-components-core-fluent-api</artifactId>
-        <version>00.07.07-RPM-SNAPSHOT</version>
+        <artifactId>vaadin-components-core-id-generator-impl</artifactId>
+        <version>01.00.00-RPM-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>org.rapidpm.vaadin</groupId>
-        <artifactId>vaadin-components-m-login-impl</artifactId>
-        <version>00.07.07-RPM-SNAPSHOT</version>
+        <artifactId>vaadin-components-core-fluent-api-impl</artifactId>
+        <version>01.00.00-RPM-SNAPSHOT</version>
       </dependency>
-
-
+      <dependency>
+        <groupId>org.rapidpm.vaadin</groupId>
+        <artifactId>vaadin-components-core-i18n-page-title</artifactId>
+        <version>01.00.00-RPM-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>org.rapidpm.vaadin</groupId>
+        <artifactId>vaadin-components-core-i18n-provider</artifactId>
+        <version>01.00.00-RPM-SNAPSHOT</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

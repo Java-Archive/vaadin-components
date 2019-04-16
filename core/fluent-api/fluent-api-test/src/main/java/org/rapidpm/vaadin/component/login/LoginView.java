@@ -15,23 +15,23 @@
  */
 package org.rapidpm.vaadin.component.login;
 
-import static org.rapidpm.frp.model.Result.ofNullable;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.buttonID;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.caption;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.passwordID;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.placeholder;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.textfieldID;
-import static org.rapidpm.vaadin.addons.framework.GenericIDGenerator.genericID;
-import static org.rapidpm.vaadin.api.fluent.builder.ComponentBuilder.horizontalLayoutBuilder;
-import static org.rapidpm.vaadin.api.fluent.builder.ComponentBuilder.textFieldBuilder;
-import static org.rapidpm.vaadin.api.fluent.builder.ComponentBuilder.verticalLayoutBuilder;
+
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.buttonID;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.caption;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.genericID;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.passwordID;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.placeholder;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.textfieldID;
+import static org.rapidpm.vaadin.api.fluent.builder.FluentAPI.horizontalLayoutBuilder;
+import static org.rapidpm.vaadin.api.fluent.builder.FluentAPI.textFieldBuilder;
+import static org.rapidpm.vaadin.api.fluent.builder.FluentAPI.verticalLayoutBuilder;
 
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 import org.rapidpm.dependencies.core.logger.HasLogger;
 import org.rapidpm.vaadin.api.fluent.builder.button.ButtonBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.checkbox.CheckboxBuilder;
-import org.rapidpm.vaadin.api.fluent.builder.layout.horizontal.HorizontalLayoutBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.passwordfield.PasswordFieldBuilder;
 import com.vaadin.flow.component.ClickEvent;
 import com.vaadin.flow.component.ComponentEventListener;
@@ -129,13 +129,23 @@ public abstract class LoginView extends Composite<HorizontalLayout> implements H
                .build())
       .build();
 
+
+  private Function<HorizontalLayout, HorizontalLayout> f = (h) -> horizontalLayoutBuilder(h)
+      .setDefaultVerticalComponentAlignment(Alignment.CENTER)
+      .setJustifyContentMode(JustifyContentMode.CENTER)
+      .add(layout)
+      .setSizeFull()
+      .build();
+
+
+  //    horizontalLayoutBuilder(getContent())
+//        .setDefaultVerticalComponentAlignment(Alignment.CENTER)
+//        .setJustifyContentMode(JustifyContentMode.CENTER)
+//        .add(layout)
+//        .setSizeFull();
+
   public LoginView() {
-    new HorizontalLayoutBuilder(ofNullable(getContent()))
-        .setDefaultVerticalComponentAlignment(Alignment.CENTER)
-        .setJustifyContentMode(JustifyContentMode.CENTER)
-        .setSizeFull()
-        .component()
-        .ifPresent(l -> l.add(layout));
+    f.apply(getContent());
   }
 
   public void clearFields() {

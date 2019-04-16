@@ -1,5 +1,5 @@
 #
-# Copyright © 2018 Sven Ruppert (sven.ruppert@gmail.com)
+# Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ version: '3.5'
 
 services:
   deploy:
-    image: svenruppert/maven-3.5-jdk-oracle-10
+    image: svenruppert/maven-3.5-jdk-oracle-11
     container_name: deploy
     hostname: deploy
     volumes:
@@ -28,11 +28,6 @@ services:
       - ~/.gnupg/:/root/.gnupg/
     working_dir: /usr/src/mymaven
     #    command: 'mvn help:active-profiles
-    command: 'mvn license:format clean deploy
-                    -Psys-nexus-deploy
-                    -Psys-nexus-deploy-gpg
-                    -Pqm-qs-lic-header-check
-                    -Pqm-qs-no-snapshots
-                    -Pgen-javadoc
-                    -Dmaven.test.skip=true
-                    '
+    command: 'mvn clean deploy
+                    -P_release
+                    -Dmaven.test.skip=true '

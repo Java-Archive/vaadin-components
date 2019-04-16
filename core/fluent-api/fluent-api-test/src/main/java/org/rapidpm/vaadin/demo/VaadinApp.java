@@ -37,9 +37,6 @@ public class VaadinApp extends VerticalLayout implements HasLogger {
   protected void onAttach(AttachEvent attachEvent) {
     super.onAttach(attachEvent);
 
-    // USE Apache Shiro for example : demo you can find here
-    // https://github.com/Nano-Vaadin-Demos/nano-vaadin-meecrowave-shiro-V10
-
     // DON NOT USE THIS IN PRODUCTION !!
     UI            current        = UI.getCurrent();
     VaadinSession currentSession = current.getSession();

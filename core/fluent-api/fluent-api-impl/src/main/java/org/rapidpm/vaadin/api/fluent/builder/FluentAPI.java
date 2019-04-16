@@ -3,15 +3,17 @@ package org.rapidpm.vaadin.api.fluent.builder;
 import java.util.function.Supplier;
 
 import org.rapidpm.vaadin.api.fluent.builder.button.ButtonBuilder;
+import org.rapidpm.vaadin.api.fluent.builder.checkbox.CheckboxBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.layout.horizontal.HorizontalLayoutBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.layout.vertical.VerticalLayoutBuilder;
 import org.rapidpm.vaadin.api.fluent.builder.textfield.TextFieldBuilder;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.checkbox.Checkbox;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 
-public interface ComponentBuilder {
+public interface FluentAPI {
 
   static ButtonBuilder buttonBuilder() {
     return buttonBuilder(Button::new);
@@ -25,6 +27,8 @@ public interface ComponentBuilder {
     return new ButtonBuilder(supplier);
   }
 
+
+
   static TextFieldBuilder textFieldBuilder() {
     return textFieldBuilder(TextField::new);
   }
@@ -36,6 +40,21 @@ public interface ComponentBuilder {
   static TextFieldBuilder textFieldBuilder(Supplier<TextField> supplier) {
     return new TextFieldBuilder(supplier);
   }
+
+
+  static CheckboxBuilder checkBoxBuilder() {
+    return checkBoxBuilder(Checkbox::new);
+  }
+
+  static CheckboxBuilder checkBoxBuilder(Checkbox t) {
+    return new CheckboxBuilder(t);
+  }
+
+  static CheckboxBuilder checkBoxBuilder(Supplier<Checkbox> supplier) {
+    return new CheckboxBuilder(supplier);
+  }
+
+
 
 
 

@@ -12,4 +12,50 @@
   <artifactId>vaadin-components-core-fluent-api-impl</artifactId>
 
 
+  <properties>
+    <!--Properties for Vaadin Directory-->
+    <Vaadin-Package-Version>1</Vaadin-Package-Version>
+    <Vaadin-Addon>${project.build.finalName}.${project.packaging}</Vaadin-Addon>
+  </properties>
+
+  <build>
+    <plugins>
+      <!--For Vaadin Directory deployment-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <index>true</index>
+            <manifest>
+              <addClasspath>false</addClasspath>
+              <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+            </manifest>
+            <manifestEntries>
+              <Vaadin-Package-Version>${Vaadin-Package-Version}</Vaadin-Package-Version>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <appendAssemblyId>false</appendAssemblyId>
+          <descriptors>
+            <descriptor>assembly/assembly.xml</descriptor>
+          </descriptors>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <phase>install</phase>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

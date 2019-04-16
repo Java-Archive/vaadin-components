@@ -6,12 +6,10 @@ Vaadin Checkbox
 Vaadin Ordered Layout - Horizontal / Vertical
 Vaadin Text Field - Text / Password
 Vaadin Combo Box
-
-## Backlog
 Vaadin Context Menu
 
+## Backlog
 Vaadin Accordion
-
 Vaadin Date Picker
 Vaadin Time Picker
 Vaadin Details 

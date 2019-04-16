@@ -2,7 +2,6 @@ package demo;
 
 import java.util.function.BiFunction;
 
-import com.google.common.collect.Maps;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 

@@ -25,6 +25,11 @@ public class CheckboxBuilder
     extends ComponentHolder<Checkbox>
     implements CheckboxMixin {
 
+
+  public CheckboxBuilder(Checkbox component) {
+    super(component);
+  }
+
   public CheckboxBuilder(Result<Checkbox> component) {
     super(component);
   }

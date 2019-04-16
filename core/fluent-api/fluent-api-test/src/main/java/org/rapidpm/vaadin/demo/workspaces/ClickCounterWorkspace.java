@@ -24,8 +24,8 @@ import com.vaadin.flow.router.Route;
 import org.rapidpm.dependencies.core.logger.HasLogger;
 
 import static java.lang.String.valueOf;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.buttonID;
-import static org.rapidpm.vaadin.addons.framework.ComponentIDGenerator.spanID;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.buttonID;
+import static org.rapidpm.vaadin.addon.idgenerator.VaadinIDGenerator.spanID;
 import static org.rapidpm.vaadin.demo.workspaces.ClickCounterWorkspace.NAV_WORKSPACE;
 
 @Route(NAV_WORKSPACE)
@@ -33,8 +33,6 @@ public class ClickCounterWorkspace extends Composite<Div> implements HasLogger {
 
   public static final String NAV_WORKSPACE = "workspace";
 
-
-  // read http://vaadin.com/testing for more infos
   public static final String BTN_CLICK_ME_ID = buttonID().apply(ClickCounterWorkspace.class, "btn-click-me");
   public static final String LB_CLICK_COUNT_ID = spanID().apply(ClickCounterWorkspace.class, "lb-click-count");
 
