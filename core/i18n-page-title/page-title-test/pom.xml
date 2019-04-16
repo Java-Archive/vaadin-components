@@ -3,18 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>vaadin-components-core</artifactId>
+    <artifactId>vaadin-components-core-i18n-page-title</artifactId>
     <groupId>org.rapidpm.vaadin</groupId>
     <version>01.00.00-RPM-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>vaadin-components-core-i18n-page-title</artifactId>
-  <packaging>pom</packaging>
-  <modules>
-    <module>page-title-impl</module>
-    <module>page-title-test</module>
-  </modules>
+  <artifactId>vaadin-components-core-i18n-page-title-test</artifactId>
 
 
 </project>
