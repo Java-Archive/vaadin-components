@@ -1,5 +1,5 @@
 #
-# Copyright © 2017 Sven Ruppert (sven.ruppert@gmail.com)
+# Copyright © 2018 Sven Ruppert (sven.ruppert@gmail.com)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ version: '3.5'
 
 services:
   deploy:
-    image: svenruppert/maven-3.5-jdk-oracle-11
+    image: svenruppert/maven-3.6-jdk-08
     container_name: deploy
     hostname: deploy
     volumes:
