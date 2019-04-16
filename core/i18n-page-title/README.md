@@ -241,7 +241,7 @@ you have to create inside the folder  **META-INF/services**
 The only line we have to add is the fully qualified name of our class.
 
 ```
-org.rapidpm.vaadin.v10.tb.demo.views.v03.i18n.I18NPageTitleEngine
+org.rapidpm.vaadin.api.i18.I18NPageTitleEngine
 ```
 
 If you have questions or something to discuss..  ping me via

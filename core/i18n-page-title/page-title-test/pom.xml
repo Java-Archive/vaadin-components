@@ -11,5 +11,8 @@
 
   <artifactId>vaadin-components-core-i18n-page-title-test</artifactId>
 
+  <properties>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
 
 </project>

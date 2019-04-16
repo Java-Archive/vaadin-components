@@ -45,14 +45,14 @@
       </dependency>
       <dependency>
         <groupId>org.rapidpm.vaadin</groupId>
-        <artifactId>vaadin-components-core-i18n-page-title</artifactId>
+        <artifactId>vaadin-components-core-i18n-page-title-impl</artifactId>
         <version>01.00.00-RPM-SNAPSHOT</version>
       </dependency>
-      <dependency>
-        <groupId>org.rapidpm.vaadin</groupId>
-        <artifactId>vaadin-components-core-i18n-provider</artifactId>
-        <version>01.00.00-RPM-SNAPSHOT</version>
-      </dependency>
+<!--      <dependency>-->
+<!--        <groupId>org.rapidpm.vaadin</groupId>-->
+<!--        <artifactId>vaadin-components-core-i18n-provider</artifactId>-->
+<!--        <version>01.00.00-RPM-SNAPSHOT</version>-->
+<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
