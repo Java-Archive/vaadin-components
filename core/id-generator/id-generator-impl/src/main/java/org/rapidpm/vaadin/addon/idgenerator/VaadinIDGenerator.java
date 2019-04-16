@@ -62,136 +62,136 @@ public interface VaadinIDGenerator {
 
 
   static BiFunction<Class, String, String> gridID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Grid.class , label);
+    return typedComponentIDGenerator().apply(Grid.class);
   }
 
   static BiFunction<Class, String, String> gridProID() {
-    return (uiClass , label) -> genericID().apply(uiClass , GridPro.class , label);
+    return typedComponentIDGenerator().apply(GridPro.class);
   }
 
   static BiFunction<Class, String, String> buttonID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Button.class , label);
+    return typedComponentIDGenerator().apply(Button.class);
   }
 
   static BiFunction<Class, String, String> comboBoxID() {
-    return (uiClass , label) -> genericID().apply(uiClass , ComboBox.class , label);
+    return typedComponentIDGenerator().apply(ComboBox.class);
   }
 
   static BiFunction<Class, String, String> datePickerID() {
-    return (uiClass , label) -> genericID().apply(uiClass , DatePicker.class , label);
+    return typedComponentIDGenerator().apply(DatePicker.class);
   }
 
   static BiFunction<Class, String, String> labelID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Label.class , label);
+    return typedComponentIDGenerator().apply(Label.class);
   }
 
   static BiFunction<Class, String, String> spanID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Span.class , label);
+    return typedComponentIDGenerator().apply(Span.class);
   }
 
   static BiFunction<Class, String, String> textfieldID() {
-    return (uiClass , label) -> genericID().apply(uiClass , TextField.class , label);
+    return typedComponentIDGenerator().apply(TextField.class);
   }
 
   static BiFunction<Class, String, String> passwordID() {
-    return (uiClass , label) -> genericID().apply(uiClass , PasswordField.class , label);
+    return typedComponentIDGenerator().apply(PasswordField.class);
   }
 
   static BiFunction<Class, String, String> checkboxID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Checkbox.class , label);
+    return typedComponentIDGenerator().apply(Checkbox.class);
   }
 
   static BiFunction<Class, String, String> contextMenuID() {
-    return (uiClass , label) -> genericID().apply(uiClass , ContextMenu.class , label);
+    return typedComponentIDGenerator().apply(ContextMenu.class);
   }
 
   static BiFunction<Class, String, String> timePickerID() {
-    return (uiClass , label) -> genericID().apply(uiClass , TimePicker.class , label);
+    return typedComponentIDGenerator().apply(TimePicker.class);
   }
 
   static BiFunction<Class, String, String> detailsID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Details.class , label);
+    return typedComponentIDGenerator().apply(Details.class);
   }
 
   static BiFunction<Class, String, String> dialogID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Dialog.class , label);
+    return typedComponentIDGenerator().apply(Dialog.class);
   }
 
   static BiFunction<Class, String, String> selectID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Select.class , label);
+    return typedComponentIDGenerator().apply(Select.class);
   }
 
   static BiFunction<Class, String, String> iconID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Icon.class , label);
+    return typedComponentIDGenerator().apply(Icon.class);
   }
 
   static BiFunction<Class, String, String> listBoxID() {
-    return (uiClass , label) -> genericID().apply(uiClass , ListBox.class , label);
+    return typedComponentIDGenerator().apply(ListBox.class);
   }
 
   static BiFunction<Class, String, String> progressBarID() {
-    return (uiClass , label) -> genericID().apply(uiClass , ProgressBar.class , label);
+    return typedComponentIDGenerator().apply(ProgressBar.class);
   }
 
   static BiFunction<Class, String, String> radioBtnGrpID() {
-    return (uiClass , label) -> genericID().apply(uiClass , RadioButtonGroup.class , label);
+    return typedComponentIDGenerator().apply(RadioButtonGroup.class);
   }
   static BiFunction<Class, String, String> tabID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Tab.class , label);
+    return typedComponentIDGenerator().apply(Tab.class);
   }
 
   static BiFunction<Class, String, String> uploadID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Upload.class , label);
+    return typedComponentIDGenerator().apply(Upload.class);
   }
 
   static BiFunction<Class, String, String> customFieldID() {
-    return (uiClass , label) -> genericID().apply(uiClass , CustomField.class , label);
+    return typedComponentIDGenerator().apply(CustomField.class);
   }
 
   static BiFunction<Class, String, String> chartID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Chart.class , label);
+    return typedComponentIDGenerator().apply(Chart.class);
   }
 
   static BiFunction<Class, String, String> richTextEditorID() {
-    return (uiClass , label) -> genericID().apply(uiClass , RichTextEditor.class , label);
+    return typedComponentIDGenerator().apply(RichTextEditor.class);
   }
 
   static BiFunction<Class, String, String> crudID() {
-    return (uiClass , label) -> genericID().apply(uiClass , Crud.class , label);
+    return typedComponentIDGenerator().apply(Crud.class);
   }
 
   static BiFunction<Class, String, String> cookieConsentID() {
-    return (uiClass , label) -> genericID().apply(uiClass , CookieConsent.class , label);
+    return typedComponentIDGenerator().apply(CookieConsent.class);
   }
 
   static BiFunction<Class, String, String> confirmDialogID() {
-    return (uiClass , label) -> genericID().apply(uiClass , ConfirmDialog.class , label);
+    return typedComponentIDGenerator().apply(ConfirmDialog.class);
   }
 
 
 //  static BiFunction<Class, String, String> itemID() {
-//    return (uiClass , label) -> genericID().apply(uiClass , Item.class , label);
+//    return typedComponentIDGenerator().apply(Item.class);
 //  }
 
 //  static BiFunction<Class, String, String> accordeonID() {
-//    return (uiClass , label) -> genericID().apply(uiClass , .class , label);
+//    return typedComponentIDGenerator().apply(.class);
 //  }
 
 //  Layouts
 
   static BiFunction<Class, String, String> verticalLayoutID() {
-    return (uiClass , label) -> genericID().apply(uiClass , VerticalLayout.class , label);
+    return typedComponentIDGenerator().apply(VerticalLayout.class);
   }
 
   static BiFunction<Class, String, String> horizontalLayoutID() {
-    return (uiClass , label) -> genericID().apply(uiClass , HorizontalLayout.class , label);
+    return typedComponentIDGenerator().apply(HorizontalLayout.class);
   }
 
   static BiFunction<Class, String, String> formLayoutID() {
-    return (uiClass , label) -> genericID().apply(uiClass , FormLayout.class , label);
+    return typedComponentIDGenerator().apply(FormLayout.class);
   }
 
   static BiFunction<Class, String, String> splitLayoutID() {
-    return (uiClass , label) -> genericID().apply(uiClass , SplitLayout.class , label);
+    return typedComponentIDGenerator().apply(SplitLayout.class);
   }
 }
